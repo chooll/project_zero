@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import InputBlock from "../component/InputBlock";
 import "../style/autorisation-page.scss";
 import UserStore from "../store/UserStore";
 import { observer } from "mobx-react";

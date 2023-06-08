@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/about-page-style/about-page.scss";
+import "../../style/about-page-style/about-page.scss";
 import { Link } from "react-router-dom";
 
 function Header() {

@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import ContentItem from "./ContentItem";
 import { useState } from "react";
-import UserStore from "../store/UserStore";
+import UserStore from "../../store/UserStore";
 import axios from "axios";
-import AddProjectTeam from "../component/desknote-page/AddProjectTeam";
+import AddProjectTeam from "../desknote-page/AddProjectTeam";
 
 function ContentBlock({
   selectedMenuItem,

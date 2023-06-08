@@ -5,7 +5,7 @@ import axios from "axios";
 import "../style/user-page.scss";
 
 import Sidebar from "../component/Sidebar";
-import ContentBlock from "../component/ContentBlock";
+import ContentBlock from "../component/content-block/ContentBlock";
 import Note from "../component/Note";
 import Task from "../component/Task";
 import UserStore from "../store/UserStore";

@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import UserStore from "../store/UserStore";
+import UserStore from "../../store/UserStore";
 
 function ContentItem({
   type,
