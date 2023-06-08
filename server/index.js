@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 const mysql = require("mysql2");
+const crypto = require("crypto");
 
 const connection = mysql.createConnection({
   host: "localhost",
@@ -150,10 +151,14 @@ app.get("/getAllTask", (req, res) => {
 
 app.post("/registerUser", (req, res) => {
   const { surname, name, password, email } = req.body;
+  const hashedPassword = crypto
+    .createHash("sha256")
+    .update(password)
+    .digest("hex");
 
   connection.query(
     "CALL reg_user(?, ?, ?, ?, @status)",
-    [escape(name), escape(surname), escape(password), escape(email)],
+    [name, surname, hashedPassword, email],
     (err, results) => {
       if (err) {
         console.error("Ошибка выполнения хранимой процедуры:", err);
@@ -195,9 +200,13 @@ app.post("/updateSubtask", (req, res) => {
 app.get("/loginUser", (req, res) => {
   const login = escape(req.query.login);
   const password = escape(req.query.password);
+  const hashedPassword = crypto
+    .createHash("sha256")
+    .update(password)
+    .digest("hex");
 
   connection.query(
-    `SELECT ID, name, surname FROM User WHERE email = '${login}' and password='${password}'`,
+    `SELECT ID, name, surname FROM User WHERE email = '${login}' and password='${hashedPassword}'`,
     (error, results, fields) => {
       if (error) {
         console.log(error);
