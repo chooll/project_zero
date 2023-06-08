@@ -1,8 +1,16 @@
 import axios from "axios";
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 
-function AddProjectTeam({ visible, setVisible, idUser, setUpdateFlag }) {
+function AddProjectTeam({
+  visible,
+  setVisible,
+  updateFlag,
+  idUser,
+  infoUpdate,
+  setUpdateFlag,
+}) {
   const [team, setTeam] = useState([]);
 
   const loadAllDataFromDB = async () => {
@@ -19,9 +27,9 @@ function AddProjectTeam({ visible, setVisible, idUser, setUpdateFlag }) {
     }
   };
 
-  useState(() => {
+  useEffect(() => {
     loadAllDataFromDB();
-  }, []);
+  }, [visible, infoUpdate.value, updateFlag]);
 
   const addProject = async (idItem) => {
     axios

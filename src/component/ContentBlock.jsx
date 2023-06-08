@@ -151,6 +151,8 @@ function ContentBlock({
         visible={visible}
         setVisible={setVisible}
         setUpdateFlag={setUpdateFlag}
+        updateFlag={updateFlag}
+        infoUpdate={infoUpdate}
       />
       <div className="filter">
         <img className="icon" src="icon/Icon Search.svg" alt="search" />

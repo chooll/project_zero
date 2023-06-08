@@ -23,6 +23,7 @@ function Autorisation() {
     if (!values.password) {
       errors.password = "Обязательное поле";
     }
+
     return errors;
   };
 
@@ -91,6 +92,7 @@ function Autorisation() {
                 name="email"
                 className="input-custom"
                 placeholder="testemail@yandex.ru"
+                maxLength="60"
               />
               <ErrorMessage
                 name="email"
@@ -106,6 +108,7 @@ function Autorisation() {
                 id="password"
                 name="password"
                 className="input-custom"
+                maxLength="60"
               />
               <ErrorMessage
                 name="password"
