@@ -124,8 +124,22 @@ function ContentBlock({
 
   useEffect(() => {
     setData([]);
-    console.log(selectedMenuItem);
   }, [selectedMenuItem]);
+
+  const [search, setSearch] = useState("");
+  const [filteredData, setFilteredData] = useState([]);
+
+  useEffect(() => {
+    // Функция фильтрации данных
+    const filterData = () => {
+      const filteredItems = data.filter((el) =>
+        el.name.toLowerCase().includes(search.toLowerCase())
+      );
+      setFilteredData(filteredItems);
+    };
+
+    filterData();
+  }, [data, search]);
 
   return (
     <article
@@ -138,20 +152,27 @@ function ContentBlock({
         setVisible={setVisible}
         setUpdateFlag={setUpdateFlag}
       />
-      <div className="filter">Фильтр</div>
+      <div className="filter">
+        <img className="icon" src="icon/Icon Search.svg" alt="search" />
+        <input
+          type="text"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="search-input gray-back"
+          placeholder="Поиск"
+        />
+      </div>
 
       <section className="content-list">
-        {data.map((el) => {
-          return (
-            <ContentItem
-              updateFlag={setUpdateFlag}
-              key={el.id}
-              type={selectedMenuItem}
-              setSelectedContentItem={setSelectedContentItem}
-              contentInfo={el}
-            />
-          );
-        })}
+        {filteredData.map((el) => (
+          <ContentItem
+            updateFlag={setUpdateFlag}
+            key={el.id}
+            type={selectedMenuItem}
+            setSelectedContentItem={setSelectedContentItem}
+            contentInfo={el}
+          />
+        ))}
       </section>
 
       <section className="add-icon">

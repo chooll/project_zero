@@ -34,7 +34,12 @@
 }
 
 .filter {
-  margin: 10px 0px 10px 0px;
+  margin: 20px 0px 20px 0px;
+  display: flex;
+  gap: 10px;
+  .icon {
+    width: 24px;
+  }
 }
 
 .subtask {
@@ -106,6 +111,10 @@
       background-color: #ec5252;
     }
   }
+}
+
+.gray-back {
+  background-color: #eff4ef;
 }
 
 .resize {
