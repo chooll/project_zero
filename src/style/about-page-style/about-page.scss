@@ -9,13 +9,12 @@
       font-family: "Golos", sans-serif;
       font-size: 24px;
     }
-  
+
     .logo {
       height: 42px;
       width: 42px;
     }
   }
-  
 }
 
 .header {
@@ -30,7 +29,7 @@
 
 .info-brand {
   font-family: "Golos", sans-serif;
-  
+
   .logotype {
     display: flex;
     align-items: center;
@@ -40,7 +39,7 @@
       font-size: 32px;
     }
   }
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,16 +60,13 @@
   font-family: "Golos", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #BA3B50;
+  color: #ba3b50;
   text-decoration: none;
 }
 
 .vertical-block {
   display: flex;
-
 }
-
-
 
 .link-bar {
   padding: 20px;
@@ -78,7 +74,6 @@
   gap: 15px;
   justify-content: center;
 }
-
 
 .about-product {
   padding: 10px 100px 10px 100px;
@@ -92,6 +87,18 @@
     align-content: center;
     align-items: center;
     gap: 20px;
+
+    img {
+      max-width: 500px;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .flex-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .text-flex-block {
@@ -100,7 +107,7 @@
 
     h2 {
       font-size: 42px;
-      color: #F4830F;
+      color: #f4830f;
       margin-bottom: 40px;
     }
 
@@ -116,5 +123,114 @@
 .container {
   margin: 30px auto;
   max-width: 1400px;
-  
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    max-width: 480px;
+  }
+
+  .project-functional {
+    height: auto !important;
+  }
+
+  .flex-three {
+    flex-direction: column;
+  }
+
+  .info-brand {
+    flex-direction: column;
+    align-content: center;
+    gap: 10px;
+  }
+
+  .logotype {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .text-brand {
+    text-align: center;
+  }
+
+  .about-product {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 320px;
+  }
+
+  .text-flex-block {
+    p {
+      font-size: 18px !important;
+    }
+  }
+
+  .flex-block {
+    img {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+
+  .link-bar {
+    display: none;
+  }
+
+  .about-product {
+    padding: 0 !important;
+  }
+
+  .grid-subscribe-block {
+    gap: 60px !important;
+  }
+
+  .card-subscribe {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #eff4ef;
+    align-items: center;
+    position: relative;
+    height: 500px;
+    max-width: 400px;
+    min-width: auto !important;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+
+  .subscribe-block {
+    height: auto !important;
+  }
+
+  .about-product {
+    padding: 10px 100px 10px 100px;
+    height: auto !important;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-color: #211621;
+  }
+  .header {
+    align-content: center;
+  }
+
+  .subscribe {
+    flex-direction: column;
+  }
+
+  .grid-subscribe-block {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+  }
 }

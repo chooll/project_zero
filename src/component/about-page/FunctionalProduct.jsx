@@ -40,7 +40,7 @@ function FunctionalProduct() {
               </div>
             </div>
 
-            <div className="project-card">
+            {/* <div className="project-card">
               <div className="project-name">
                 <h3>ГЕНЕРАЦИЯ ИДЕЙ</h3>
               </div>
@@ -54,7 +54,7 @@ function FunctionalProduct() {
                   <p>Записывайте ваши идеи, чтобы они не пропадали безследно</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="flex-three">
