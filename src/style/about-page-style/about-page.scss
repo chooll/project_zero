@@ -1,0 +1,120 @@
+.top-bar {
+  .logotype {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+
+    p {
+      font-family: "Golos", sans-serif;
+      font-size: 24px;
+    }
+  
+    .logo {
+      height: 42px;
+      width: 42px;
+    }
+  }
+  
+}
+
+.header {
+  display: grid;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.info-brand {
+  font-family: "Golos", sans-serif;
+  
+  .logotype {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    p {
+      font-weight: 600;
+      font-size: 32px;
+    }
+  }
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 150px;
+
+  .text-brand {
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+.link {
+  font-family: "Golos", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #BA3B50;
+  text-decoration: none;
+}
+
+.vertical-block {
+  display: flex;
+
+}
+
+
+
+.link-bar {
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+
+.about-product {
+  padding: 10px 100px 10px 100px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  align-content: center;
+
+  .flex-block {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .text-flex-block {
+    padding: 20px;
+    font-family: "Golos", sans-serif;
+
+    h2 {
+      font-size: 42px;
+      color: #F4830F;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-size: 25px;
+      color: white;
+    }
+  }
+
+  background-color: #211621;
+}
+
+.container {
+  margin: 30px auto;
+  max-width: 1400px;
+  
+}

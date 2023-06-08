@@ -1,0 +1,150 @@
+@import url(about-page.scss);
+
+.project-functional {
+  font-family: "Golos";
+  margin: 70px 0px 70px 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  align-content: center;
+  margin: 35px 0px 35px 0px;
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 495px;
+
+  .project-name {
+    position: absolute;
+    display: flex;
+    width: 80%;
+    text-align: center;
+    background-color: #ba3b50;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+
+    h3 {
+      margin: 0 auto;
+    }
+  }
+
+  .project-description {
+    display: flex;
+    background-color: #211621;
+    align-items: center;
+    max-width: 350px;
+    padding: 20px;
+    color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+
+    .project-icon {
+      width: 38px;
+      filter: invert(100%);
+    }
+
+    .text-icon {
+      display: flex;
+      margin-top: 60px;
+      margin-bottom: 40px;
+      gap: 10px;
+    }
+  }
+}
+
+.name-block {
+  margin: 25px 0px 25px 0px;
+  font-size: 36px;
+}
+
+.flex-three {
+  display: flex;
+  gap: 20px;
+}
+
+.subscribe-block {
+  font-family: "Golos", sans-serif;
+  background-color: #211621;
+  padding: 30px;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  h2 {
+    color: #f4830f;
+  }
+
+  .grid-subscribe-block {
+    display: flex;
+    gap: 40px;
+  }
+
+  .card-subscribe {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #eff4ef;
+    align-items: center;
+    position: relative;
+    height: 500px;
+    max-width: 400px;
+    min-width: 320px;
+
+    .possibility-list {
+      margin-bottom: 40px;
+    }
+
+    h3 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    font-size: 18px;
+    border-radius: 5px;
+
+    .card-accent {
+      margin: 10px 0px 10px 0px;
+      color: #ba3b50;
+      font-weight: 700;
+    }
+
+    .possibility {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 0px 5px 0px;
+
+      .icon {
+        width: 32px;
+      }
+    }
+
+    .go-subsribe {
+      position: absolute;
+      padding: 20px;
+      background-color: #ba3b50;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 22px;
+      bottom: -35px;
+      font-weight: 700;
+      min-width: 60%;
+    }
+  }
+}

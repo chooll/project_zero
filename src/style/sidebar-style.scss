@@ -1,0 +1,96 @@
+.sidebar {
+  background: #211621;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 10000;
+  .icon {
+    width: 40px;
+    filter: invert(25%) sepia(84%) saturate(5104%) hue-rotate(333deg)
+      brightness(91%) contrast(91%);
+    cursor: pointer;
+  }
+
+  .icon-user {
+    filter: invert(120%) sepia(500%) saturate(1858%) hue-rotate(349deg)
+      brightness(98%) contrast(107%);
+
+    fill: currentColor;
+    color: white;
+
+    margin: 15px 0px 15px 0px;
+  }
+
+  .icon:hover {
+    filter: invert(25%) sepia(84%) saturate(5104%) hue-rotate(333deg)
+      brightness(91%) contrast(91%) drop-shadow(0px 2px 4px #ba3b50);
+  }
+}
+
+.sidebar-small {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sidebar-full {
+  font-family: "Arial", sans-serif;
+  font-size: 19px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .name-user {
+    color: white;
+  }
+
+  .out-acc {
+    display: none;
+  }
+
+  .menu-block {
+    display: flex;
+    gap: 15px;
+    color: #a5a5a5;
+    align-items: center;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+
+  .menu-block:hover {
+    color: white;
+
+    .icon {
+      filter: invert(25%) sepia(84%) saturate(5104%) hue-rotate(333deg)
+        brightness(91%) contrast(91%) drop-shadow(0px 2px 4px #ba3b50);
+    }
+
+    .name-user {
+      display: none;
+    }
+
+    .out-acc {
+      display: flex;
+    }
+  }
+}
+
+.sidebar-full {
+  display: none;
+}
+
+.sidebar:hover {
+  .sidebar-small {
+    display: none;
+  }
+  .sidebar-full {
+    display: flex;
+  }
+}

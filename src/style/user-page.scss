@@ -1,0 +1,444 @@
+.desk-note {
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.content-block {
+  background-color: #eff4ef;
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 60px;
+  padding: 20px 20px 0px 20px;
+  font-family: "Golos", sans-serif;
+  max-width: 320px;
+  box-shadow: -3px 0px 25px rgba(0, 0, 0, 0.25);
+
+  .icon {
+    width: 40px;
+    filter: invert(25%) sepia(84%) saturate(5104%) hue-rotate(333deg)
+      brightness(91%) contrast(91%);
+    cursor: pointer;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .pd20 {
+    padding: 20px;
+    margin: 15px;
+  }
+}
+
+.name-descript-content {
+  margin-bottom: 20px;
+}
+
+.filter {
+  margin: 10px 0px 10px 0px;
+}
+
+.subtask {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #eff4ef;
+  gap: 10px;
+  margin: 15px 0px 15px 0px;
+  font-family: "Golos", sans-serif;
+  justify-content: space-between;
+  .checkbox-subtask {
+    min-width: 24px;
+    min-height: 24px;
+  }
+
+  .delete-section {
+    font-size: 14px;
+    color: #ec5252;
+    cursor: pointer;
+  }
+
+  .text-subtask {
+    font-family: "Golos", sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    font-size: 16px;
+    background-color: #eff4ef;
+    outline: none;
+    resize: none;
+  }
+}
+
+.content-list {
+  overflow-x: auto;
+  max-height: 400px;
+  padding: 5px;
+}
+
+.add-icon {
+  padding: 20px;
+}
+
+.content-item {
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  margin: 15px 0px 15px 0px;
+  justify-content: space-between;
+
+  .name-content {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    .color-item {
+      display: flex;
+      padding: 10px;
+      max-width: 16px;
+      max-height: 16px;
+      border-radius: 50%;
+      background-color: #ec5252;
+    }
+  }
+}
+
+.resize {
+  resize: vertical;
+  padding: 20px;
+  width: 100px;
+}
+
+.grid-table {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+}
+
+.icon-func {
+  font-family: "Golos UI", sans-serif;
+  font-size: 12px;
+  color: #ec5252;
+  opacity: 0;
+
+  img {
+    width: 25px;
+  }
+}
+
+.icon-func:hover {
+  transition: 200ms;
+  opacity: 1;
+}
+
+.work-desk {
+  display: flex;
+  gap: 20px;
+  max-width: 100%;
+  height: 100vh;
+  overflow-x: auto;
+
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: "Golos", sans-serif;
+  }
+}
+
+.max-size {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-space {
+  font-family: "Golos", sans-serif;
+  margin: 15px auto; /* set margin of 15px on top and bottom, and auto on left and right */
+  width: 100%; /* make the block take up the full width of its container */
+  box-sizing: border-box; /* include padding and border in the element's total width and height */
+  overflow-y: auto;
+
+  .info {
+    .nameNote {
+      font-size: 32px;
+      font-weight: bold;
+      box-sizing: border-box;
+      width: 100%;
+      border: none;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    .date {
+      font-size: 14px;
+    }
+
+    .team-name {
+      font-size: 16px;
+    }
+  }
+
+  .inputBlock {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 16px;
+    margin: 30px 0px 10px 0px;
+    font-family: "Golos", sans-serif;
+    border: 0 solid black;
+    outline: none;
+    overflow: hidden;
+    line-height: 1.5em;
+    resize: none;
+    text-align: justify;
+  }
+}
+
+.task {
+  .info {
+    h2 {
+      font-size: 32px;
+    }
+
+    .date {
+      font-size: 14px;
+    }
+
+    margin: 0px 0px 20px 0px;
+  }
+
+  .under-task-field {
+    padding: 10px;
+  }
+
+  .under-task {
+    display: flex;
+    gap: 10px;
+    box-sizing: border-box;
+
+    padding: 10px;
+    background: #eff4ef;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    margin: 15px 0px 15px 0px;
+    .task-text {
+      box-sizing: border-box;
+      width: 100%;
+      font-size: 16px;
+      font-family: "Golos", sans-serif;
+      border: 0 solid black;
+      outline: none;
+      overflow: hidden;
+      line-height: 1.5em;
+      text-align: justify;
+      width: 100%;
+      background: #eff4ef;
+    }
+
+    .task-status {
+      background: #eff4ef;
+      display: flex;
+      width: 30px;
+    }
+  }
+
+  .icon-plus {
+    display: flex;
+    margin: 15px auto;
+    width: 32px;
+    cursor: pointer;
+  }
+}
+
+.warning-conf {
+  color: #ec5252;
+}
+
+.delete-confirm {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+
+  .choose {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
+.team-members {
+  margin: 10px 0px 10px 0px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.members {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.27);
+  border-radius: 5px;
+
+  .icon {
+    max-width: 32px;
+    max-height: 32px;
+    cursor: pointer;
+  }
+
+  .admin {
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+  }
+
+  .member-name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .email {
+    font-size: 16px;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-member {
+  margin: 15px 0px 15px 0px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  .icon {
+    max-width: 24px;
+  }
+
+  .add-member {
+    display: flex;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 24px;
+  }
+}
+
+.search-input {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+  outline: none;
+
+  font-family: "Golos", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.project-item {
+  margin: 15px 0px 15px 0px;
+  filter: drop-shadow(0px 0px 6px rgba(134, 134, 134, 0.46));
+}
+
+.item-name {
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  color: none;
+  background-color: #ba3b50;
+  color: white;
+  font-weight: 600;
+  outline: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: "Golos", sans-serif;
+}
+
+.list-task {
+  background-color: #fff;
+  padding: 10px;
+
+  .add-task {
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .delete {
+    text-align: right;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .delete:hover {
+    color: #ba3b50;
+  }
+
+  .add-task:hover {
+    color: #ba3b50;
+  }
+}
+
+.task-name {
+  margin: 10px 0px 10px 0px;
+  max-width: 100%;
+  padding: 10px;
+  width: 100%;
+  resize: none;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Golos", sans-serif;
+  border: none;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.work-kanban {
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 5px;
+  gap: 15px;
+}
+
+.func {
+  margin: 20px 0px 20px 0px;
+
+  cursor: pointer;
+
+  color: #ba3b50;
+}
+
+.name-delete {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ba3b50;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  .icon {
+    max-width: 25px;
+    max-height: 25px;
+    cursor: pointer;
+  }
+}
