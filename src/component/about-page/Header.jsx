@@ -22,7 +22,7 @@ function Header() {
           <p>
             Это простое и изящное решение для тех, кто хочет прогрессировать.
           </p>
-          <Link className="link" to="/user">
+          <Link className="link" to="/autorisation">
             В перед к прогрессу
           </Link>
         </div>
@@ -38,7 +38,7 @@ function Header() {
         <a href="#subscribe" className="link">
           Подписи
         </a>
-        <Link to="/user" className="link">
+        <Link to="/autorisation" className="link">
           Регистрация
         </Link>
       </section>

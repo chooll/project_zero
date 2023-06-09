@@ -10,7 +10,7 @@ function Note({ note, infoUpdate }) {
   useEffect(() => {
     setNoteDescription(note.description);
     setNoteName(note.name);
-  }, [note.id, note.description, note.name]);
+  }, [note.id, note.description]);
 
   const saveUpdate = debounce(async (nT, noteDescription, idNote) => {
     axios
@@ -20,12 +20,13 @@ function Note({ note, infoUpdate }) {
         idNote: idNote,
       })
       .then((res) => {
+        // console.log("Было сохранено:", nT);
         infoUpdate.setter((prevFlag) => !prevFlag);
       })
       .catch((error) => {
         console.error("Ошибка сохранения данных:", error);
       });
-  }, 300);
+  }, 200);
 
   const handleNoteNameChange = (event) => {
     const newNoteName = event.target.value;
