@@ -77,7 +77,7 @@ function Autorisation() {
           onSubmit={loginUser}
         >
           <Form>
-            <div className="logotype-form-text">
+            <div className="logotype-form-text" onClick={(e) => navigate("/")}>
               <img src="logotype/Logotype.svg" alt="LOGO" />
               <p>Excellent Note Desk</p>
             </div>

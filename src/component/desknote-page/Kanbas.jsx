@@ -70,7 +70,7 @@ function Kanban({ kanban, infoUpdate }) {
             className="nameNote"
             value={nameKanban}
             onChange={handleChangeName}
-            maxLength="70"
+            maxLength="32"
           />
           <p className="team-name">Команда</p>
           <p className="date">

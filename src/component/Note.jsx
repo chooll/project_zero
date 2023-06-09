@@ -20,25 +20,24 @@ function Note({ note, infoUpdate }) {
         idNote: idNote,
       })
       .then((res) => {
-        // console.log("Было сохранено:", nT);
         infoUpdate.setter((prevFlag) => !prevFlag);
       })
       .catch((error) => {
         console.error("Ошибка сохранения данных:", error);
       });
-  }, 200);
+  }, 100);
 
   const handleNoteNameChange = (event) => {
     const newNoteName = event.target.value;
     setNoteName(newNoteName);
-    saveUpdate(newNoteName, note.description, note.id);
+    saveUpdate(newNoteName, noteDescription, note.id);
     infoUpdate.setter((prevFlag) => !prevFlag);
   };
 
   const handleNoteDescriptionChange = (event) => {
     const newDescription = event.target.value;
     setNoteDescription(newDescription);
-    saveUpdate(note.name, newDescription, note.id);
+    saveUpdate(noteName, newDescription, note.id);
     infoUpdate.setter((prevFlag) => !prevFlag);
   };
 
@@ -50,24 +49,13 @@ function Note({ note, infoUpdate }) {
           className="nameNote"
           value={noteName}
           onChange={handleNoteNameChange}
-          maxLength={32}
+          maxLength="30"
         />
 
         <p className="date">
           Дата {new Date(note.date_create).toLocaleString()}
         </p>
       </div>
-
-      {/* <textarea
-        type="text"
-        className="inputBlock"
-        cols="50"
-        rows="20"
-        multiple="5"
-        maxLength="1796"
-        value={noteDescription}
-        onChange={handleNoteDescriptionChange}
-      /> */}
 
       <TextareaAutosize
         className="inputBlock"

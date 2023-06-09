@@ -493,7 +493,6 @@ app.post("/updateProject", (req, res) => {
   const idProject = req.body.project;
   const newName = req.body.name;
 
-  console.log("CALL update_project(?,?)", [idProject, newName]);
   connection.query(
     "CALL update_project(?,?)",
     [idProject, newName],

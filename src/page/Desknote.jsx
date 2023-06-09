@@ -93,7 +93,6 @@ function Desknote() {
   };
 
   const loadTaskInfo = async (selectedContentItem) => {
-    // console.log("IN LOAD", selectedContentItem);
     axios
       .post("http://localhost:5000/getTask", {
         idTask: selectedContentItem,
@@ -129,7 +128,6 @@ function Desknote() {
         break;
       case "project":
         loadKanbanInfo(selectedContentItem);
-        console.log(loadedKanban);
         break;
     }
   };
@@ -147,7 +145,7 @@ function Desknote() {
     (e) => {
       getWorkSpaceData();
     },
-    [selectedContentItem]
+    [selectedContentItem, infoUpdate.value]
   );
 
   return (

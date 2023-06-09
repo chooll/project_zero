@@ -6,20 +6,22 @@ import { debounce } from "lodash";
 
 function Task({ task, infoUpdate }) {
   const [allSubtask, setAllSubtask] = useState([]);
-  const [nameTask, setNameTask] = useState(task.name ? task.name : "");
-  const [amountAccepted, setAmountAccepted] = useState(0);
+  const [name, setNameTask] = useState(task.name);
   const [updateFlag, setUpdateFlag] = useState(false);
 
   useEffect(() => {
     setNameTask(task.name);
-    loadData();
-  }, [task.id, updateFlag]);
+  }, [task.id]);
 
-  const saveData = debounce(async (idTask, nameTask, dateEnd) => {
+  useEffect(() => {
+    loadData();
+  }, [updateFlag]);
+
+  const saveData = debounce(async (idTask, nT, dateEnd) => {
     axios
       .post("http://localhost:5000/updateTask", {
         idTask: idTask,
-        nameTask: nameTask,
+        nameTask: nT,
         dateEnd: dateEnd,
       })
       .then((res) => {
@@ -37,7 +39,6 @@ function Task({ task, infoUpdate }) {
       })
       .then((res) => {
         setAllSubtask(res.data[0]);
-        console.log(res.data[0]);
       })
       .catch((error) => console.log(error));
   };
@@ -56,8 +57,9 @@ function Task({ task, infoUpdate }) {
 
   const handleTaskNameChange = (event) => {
     const newName = event.target.value;
-    setNameTask((prev) => newName);
     const date = new Date(task.end_time).toISOString().slice(0, 10);
+
+    setNameTask(newName);
     saveData(task.id, newName, date);
     infoUpdate.setter((prevFlag) => !prevFlag);
   };
@@ -68,9 +70,9 @@ function Task({ task, infoUpdate }) {
         <input
           type="text"
           className="nameNote"
-          value={nameTask}
+          value={name}
           onChange={handleTaskNameChange}
-          maxLength={32}
+          maxLength="32"
         />
         {/* <h2>{nameTask}</h2> */}
         <p className="date">

@@ -12,9 +12,11 @@ function Team({ team, infoUpdate }) {
 
   useEffect(() => {
     setNameTeam(team.name);
-    loadAllMembers();
-  }, [team.id, team.name, updateFlag]);
+  }, [team.id]);
 
+  useEffect(() => {
+    loadAllMembers();
+  }, [updateFlag]);
   const saveUpdate = debounce(async (nameTeam, idTeam) => {
     axios
       .post("http://localhost:5000/updateTeam", {
@@ -114,7 +116,7 @@ function Team({ team, infoUpdate }) {
           className="nameNote"
           value={nameTeam}
           onChange={handleTeamName}
-          maxLength="70"
+          maxLength="32"
         />
         <p className="date">
           Дата {new Date(team.date_create).toLocaleString().slice(0, 10)}
