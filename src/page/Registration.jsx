@@ -78,7 +78,7 @@ function Registration() {
           onSubmit={regUser}
         >
           <Form>
-            <div className="logotype-form-text">
+            <div onClick={(e) => navigate("/")} className="logotype-form-text">
               <img src="logotype/Logotype.svg" alt="LOGO" />
               <p>Excellent Note Desk</p>
             </div>

@@ -28,6 +28,7 @@ function Desknote() {
   const [loadedTeam, setLoadedTeam] = useState([]);
   const [loadedKanban, setLoadedKanban] = useState({});
 
+  // Флаги обновления для дочерних элементов
   const infoUpdate = {
     value: valueUpdate,
     setter: setValueUpdate,
