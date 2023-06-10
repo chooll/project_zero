@@ -10,7 +10,7 @@ function Note({ note, infoUpdate }) {
   useEffect(() => {
     setNoteDescription(note.description);
     setNoteName(note.name);
-  }, [note.id, note.description]);
+  }, [note.id]);
 
   const saveUpdate = debounce(async (nT, noteDescription, idNote) => {
     axios

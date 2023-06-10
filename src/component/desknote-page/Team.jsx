@@ -12,6 +12,7 @@ function Team({ team, infoUpdate }) {
 
   useEffect(() => {
     setNameTeam(team.name);
+    loadAllMembers();
   }, [team.id]);
 
   useEffect(() => {

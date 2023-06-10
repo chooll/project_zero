@@ -259,8 +259,6 @@ app.post("/getUserIdEmail", (req, res) => {
       if (error) {
         throw error;
       }
-      console.log("CALL get_user_by_email (?)", email);
-      console.log(results);
       res.json(results[0]);
     }
   );
@@ -309,7 +307,6 @@ app.post("/addNote", (req, res) => {
     [noteName, noteDescription, userId],
     (err, results) => {
       if (err) throw err;
-      console.log("Note added successfully");
       res.send("Note added successfully");
     }
   );
@@ -322,7 +319,6 @@ app.post("/deleteNote", (req, res) => {
   const query = "CALL delete_note(?)";
   connection.query(query, [idNote], (err, results) => {
     if (err) throw err;
-    console.log("Note was delete");
     res.send("Note was delete");
   });
 });

@@ -11,6 +11,7 @@ function Task({ task, infoUpdate }) {
 
   useEffect(() => {
     setNameTask(task.name);
+    loadData();
   }, [task.id]);
 
   useEffect(() => {
