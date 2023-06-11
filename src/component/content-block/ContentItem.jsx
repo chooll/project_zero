@@ -19,7 +19,7 @@ function ContentItem({
     switch (type) {
       case "task":
         axios
-          .post("http://localhost:5000/deleteTask", { idTask: idItem })
+          .post("http://194.67.110.25:5000/deleteTask", { idTask: idItem })
           .then((response) => {
             updateFlag((prevFlag) => !prevFlag);
           })
@@ -28,7 +28,7 @@ function ContentItem({
           });
       case "note":
         axios
-          .post("http://localhost:5000/deleteNote", {
+          .post("http://194.67.110.25:5000/deleteNote", {
             idNote: idItem,
           })
           .then((response) => {
@@ -39,7 +39,7 @@ function ContentItem({
           });
       case "team":
         axios
-          .post("http://localhost:5000/deleteMember", {
+          .post("http://194.67.110.25:5000/deleteMember", {
             idTeam: idItem,
             idMember: UserStore.id,
           })

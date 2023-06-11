@@ -18,7 +18,7 @@ function Kanban({ kanban, infoUpdate }) {
 
   const saveData = debounce(async (name) => {
     axios
-      .post("http://localhost:5000/updateProject", {
+      .post("http://194.67.110.25:5000/updateProject", {
         project: kanban.id,
         name: name,
       })
@@ -30,7 +30,7 @@ function Kanban({ kanban, infoUpdate }) {
 
   const loadItem = async () => {
     axios
-      .post(`http://localhost:5000/getItemKanban`, {
+      .post(`http://194.67.110.25:5000/getItemKanban`, {
         idItem: kanban.id,
       })
       .then((response) => {
@@ -41,7 +41,7 @@ function Kanban({ kanban, infoUpdate }) {
 
   const addItemKanban = async () => {
     axios
-      .post(`http://localhost:5000/addKanbanItem`, {
+      .post(`http://194.67.110.25:5000/addKanbanItem`, {
         itemName: "Без названия",
         idKanban: kanban.id,
       })

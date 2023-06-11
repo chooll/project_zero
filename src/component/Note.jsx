@@ -14,7 +14,7 @@ function Note({ note, infoUpdate }) {
 
   const saveUpdate = debounce(async (nT, noteDescription, idNote) => {
     axios
-      .post("http://localhost:5000/updateNote", {
+      .post("http://194.67.110.25:5000/updateNote", {
         noteName: nT,
         noteDescription: noteDescription,
         idNote: idNote,

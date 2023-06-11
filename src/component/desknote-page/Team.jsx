@@ -20,7 +20,7 @@ function Team({ team, infoUpdate }) {
   }, [updateFlag]);
   const saveUpdate = debounce(async (nameTeam, idTeam) => {
     axios
-      .post("http://localhost:5000/updateTeam", {
+      .post("http://194.67.110.25:5000/updateTeam", {
         nameTeam: nameTeam,
         idTeam: idTeam,
       })
@@ -41,7 +41,7 @@ function Team({ team, infoUpdate }) {
 
   const loadAllMembers = () => {
     axios
-      .post("http://localhost:5000/getMembersTeam", {
+      .post("http://194.67.110.25:5000/getMembersTeam", {
         idTeam: team.id,
         idUser: UserStore.id,
       })
@@ -53,7 +53,7 @@ function Team({ team, infoUpdate }) {
 
   const deleteMember = (idUser) => {
     axios
-      .post("http://localhost:5000/deleteMember", {
+      .post("http://194.67.110.25:5000/deleteMember", {
         idTeam: team.id,
         idMember: idUser,
       })
@@ -76,7 +76,7 @@ function Team({ team, infoUpdate }) {
   const addMember = (emailUser) => {
     var idUser = null;
     axios
-      .post("http://localhost:5000/getUserIdEmail", {
+      .post("http://194.67.110.25:5000/getUserIdEmail", {
         email: emailUser,
       })
       .then((response) => {
@@ -92,7 +92,7 @@ function Team({ team, infoUpdate }) {
               return;
             }
             axios
-              .post("http://localhost:5000/addMember", {
+              .post("http://194.67.110.25:5000/addMember", {
                 idUser: idUser,
                 idTeam: team.id,
               })

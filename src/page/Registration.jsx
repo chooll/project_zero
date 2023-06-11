@@ -48,7 +48,7 @@ function Registration() {
         password: values.password,
         email: values.email,
       };
-      fetch("http://localhost:5000/registerUser", {
+      fetch("http://194.67.110.25:5000/registerUser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

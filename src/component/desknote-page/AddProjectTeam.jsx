@@ -16,7 +16,7 @@ function AddProjectTeam({
   const loadAllDataFromDB = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/getUserTeam?id=${idUser}`
+        `http://194.67.110.25:5000/getUserTeam?id=${idUser}`
       );
       const data = await response.json();
       if (data[0]) {
@@ -33,7 +33,7 @@ function AddProjectTeam({
 
   const addProject = async (idItem) => {
     axios
-      .post("http://localhost:5000/addProject", {
+      .post("http://194.67.110.25:5000/addProject", {
         name: "Проект без названия",
         id: idItem,
       })

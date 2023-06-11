@@ -43,7 +43,7 @@ function Autorisation() {
 
   const loginUser = async (values) => {
     const promiseResultLogin = await fetch(
-      `http://localhost:5000/loginUser?password=${values.password}&login=${values.email}`
+      `http://194.67.110.25:5000/loginUser?password=${values.password}&login=${values.email}`
     );
     const resultLogin = await promiseResultLogin.json();
 

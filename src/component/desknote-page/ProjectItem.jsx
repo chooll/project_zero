@@ -14,7 +14,7 @@ function ProjectItem({ projectItem, setUpdateFlag, infoUpdate }) {
   }, [selfUpdateFlag]);
 
   const saveData = debounce(async (name) => {
-    axios.post("http://localhost:5000/updateKanbanItem", {
+    axios.post("http://194.67.110.25:5000/updateKanbanItem", {
       itemId: projectItem.id,
       name: name,
     });
@@ -29,7 +29,7 @@ function ProjectItem({ projectItem, setUpdateFlag, infoUpdate }) {
 
   const loadItem = async () => {
     axios
-      .post(`http://localhost:5000/getTaskKanban`, {
+      .post(`http://194.67.110.25:5000/getTaskKanban`, {
         idItem: projectItem.id,
       })
       .then((response) => {
@@ -42,7 +42,7 @@ function ProjectItem({ projectItem, setUpdateFlag, infoUpdate }) {
 
   const addTaskItem = async () => {
     axios
-      .post(`http://localhost:5000/addTaskKanban`, {
+      .post(`http://194.67.110.25:5000/addTaskKanban`, {
         itemId: projectItem.id,
         nameTask: "",
         userId: UserStore.id,
@@ -55,7 +55,7 @@ function ProjectItem({ projectItem, setUpdateFlag, infoUpdate }) {
 
   const deleteItem = async () => {
     axios
-      .post("http://localhost:5000/deleteProjectItem", {
+      .post("http://194.67.110.25:5000/deleteProjectItem", {
         idItem: projectItem.id,
       })
       .then((response) => {

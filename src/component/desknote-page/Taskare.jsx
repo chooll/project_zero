@@ -9,7 +9,7 @@ function TaskArea({ task, setUpdateFlag, infoUpdate, setUpdate }) {
 
   const saveData = debounce(async (nameTask) => {
     axios
-      .post("http://localhost:5000/updateProjectTask", {
+      .post("http://194.67.110.25:5000/updateProjectTask", {
         idTask: task.id,
         nameTask: nameTask,
       })
@@ -21,7 +21,7 @@ function TaskArea({ task, setUpdateFlag, infoUpdate, setUpdate }) {
 
   const deleteData = async () => {
     axios
-      .post("http://localhost:5000/deleteProjectTask", {
+      .post("http://194.67.110.25:5000/deleteProjectTask", {
         idItem: task.id,
       })
       .then((responce) => {

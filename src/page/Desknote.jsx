@@ -73,7 +73,7 @@ function Desknote() {
 
   const loadKanbanInfo = (selectedContentItem) => {
     axios
-      .post("http://localhost:5000/getProject", {
+      .post("http://194.67.110.25:5000/getProject", {
         idProject: selectedContentItem,
       })
       .then((response) => {
@@ -84,7 +84,7 @@ function Desknote() {
 
   const loadTeamInfo = (selectedContentItem) => {
     axios
-      .post("http://localhost:5000/getTeam", {
+      .post("http://194.67.110.25:5000/getTeam", {
         idTeam: selectedContentItem,
       })
       .then((response) => {
@@ -95,7 +95,7 @@ function Desknote() {
 
   const loadTaskInfo = async (selectedContentItem) => {
     axios
-      .post("http://localhost:5000/getTask", {
+      .post("http://194.67.110.25:5000/getTask", {
         idTask: selectedContentItem,
       })
       .then((res) => {
@@ -106,7 +106,7 @@ function Desknote() {
 
   const fetchToServer = async (api, id) => {
     try {
-      const response = await fetch(`http://localhost:5000/${api}?id=${id}`);
+      const response = await fetch(`http://194.67.110.25:5000/${api}?id=${id}`);
       const data = await response.json();
       if (data.length !== 0) {
         setLoadedNote(data[0]);

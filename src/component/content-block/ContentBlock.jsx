@@ -56,7 +56,7 @@ function ContentBlock({
   const loadAllDataFromDB = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/${allURLData[selectedMenuItem]}?id=${UserStore.id}`
+        `http://194.67.110.25:5000/${allURLData[selectedMenuItem]}?id=${UserStore.id}`
       );
 
       const data = await response.json();
@@ -73,7 +73,7 @@ function ContentBlock({
   const addContentItem = {
     task: async () => {
       axios
-        .post("http://localhost:5000/addTask", {
+        .post("http://194.67.110.25:5000/addTask", {
           name: "Задача без названия",
           idUser: UserStore.id,
           dataEnd: new Date().toISOString().slice(0, 10),
@@ -88,7 +88,7 @@ function ContentBlock({
 
     note: async () => {
       axios
-        .post("http://localhost:5000/addNote", {
+        .post("http://194.67.110.25:5000/addNote", {
           name: "Пустая заметка",
           description: "",
           userId: UserStore.id,
@@ -103,7 +103,7 @@ function ContentBlock({
 
     team: async () => {
       axios
-        .post("http://localhost:5000/addTeam", {
+        .post("http://194.67.110.25:5000/addTeam", {
           nameTeam: "Команда без названия",
           idUser: UserStore.id,
         })

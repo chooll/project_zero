@@ -11,7 +11,7 @@ function Subtask({ subtaskItem, setUpdateFlag }) {
 
   const deleteSubtask = async () => {
     axios
-      .post("http://localhost:5000/deleteSubtask", {
+      .post("http://194.67.110.25:5000/deleteSubtask", {
         idSubtask: subtaskItem.id,
       })
       .then((res) => {
@@ -24,7 +24,7 @@ function Subtask({ subtaskItem, setUpdateFlag }) {
 
   const saveUpdate = debounce((idSubtask, title, status) => {
     axios
-      .post("http://localhost:5000/updateSubtask", {
+      .post("http://194.67.110.25:5000/updateSubtask", {
         idSubtask: idSubtask,
         title: title,
         status: status,

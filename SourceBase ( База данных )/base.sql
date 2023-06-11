@@ -706,7 +706,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` tinytext NOT NULL,
   `surname` tinytext NOT NULL,
-  `email` tinytext NOT NULL,
+  `email` varchar(255) NOT NULL,
   `password` tinytext DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`) USING HASH

@@ -20,7 +20,7 @@ function Task({ task, infoUpdate }) {
 
   const saveData = debounce(async (idTask, nT, dateEnd) => {
     axios
-      .post("http://localhost:5000/updateTask", {
+      .post("http://194.67.110.25:5000/updateTask", {
         idTask: idTask,
         nameTask: nT,
         dateEnd: dateEnd,
@@ -35,7 +35,7 @@ function Task({ task, infoUpdate }) {
 
   const loadData = async () => {
     axios
-      .post("http://localhost:5000/getSubtask", {
+      .post("http://194.67.110.25:5000/getSubtask", {
         idTask: task.id,
       })
       .then((res) => {
@@ -46,7 +46,7 @@ function Task({ task, infoUpdate }) {
 
   const addSubtask = async () => {
     axios
-      .post("http://localhost:5000/addSubtask", {
+      .post("http://194.67.110.25:5000/addSubtask", {
         idTask: task.id,
         title: "Новая задача",
         status: 0,
